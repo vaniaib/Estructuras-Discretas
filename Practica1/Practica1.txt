@@ -1,0 +1,16 @@
+1. ¿Cuáles son las principales diferencias entre Haskell y Java?
+Que Haskell es un lenguaje funcional, un paradigma de programación que enfatiza el uso de funciones para resolver problemas, mientras que Java es orientado a objetos, otra diferencia es que Haskell tiene una evaluación perezosa y en Java esa evaluación es estricta, otra diferencia es que Haskell tiene un tipado muy fuerte e infiere y Java no.
+
+2. ¿Por qué Haskell no ha alcanzado una adopción significativa en la industria del software?
+Porque puede que las personas tiendan a considerarlo como diferente a otros e incluso dificil.
+
+
+
+3. Si pudieras realizar un simple analogía entre Git y GitHub, ¿Cuál se te vendría a la mente?
+Git es como el  borrador de un proyecto y Github es la exposición de este.
+
+Referencias:
+
+1. Haskell vs other programming languages A comparison. (s. f.). https://haskell-dev.translate.goog/article/Haskell_vs_other_programming_languages_A_comparison.html?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
+2. Haskell Language. (s. f.). https://www.haskell.org/
+3. Haskell: el Lenguaje Funcional. (s. f.). Fsancho. Recuperado 22 de agosto de 2025, de https://www.cs.us.es/~fsancho/Blog/posts/Haskell_el_lenguaje_funcional.md
