@@ -58,7 +58,7 @@ esDescendiente w x y z=
 {-Función: esDivisible
 Descripción: recibe dos enteros x , y
 y devuelve una salida del estilo x es divisible por y.
-uso: esDivisble 8 4
+uso: esDivisible 8 4
      8 es divisible por 4
 -}
 esDivisible :: Int -> Int -> IO()
@@ -93,7 +93,8 @@ pendiente ((x1, y1), (x2,y2))=
  {-Función: distanciaPuntos
 Descripción:Recibe dos tuplas de dos elementos float respectivamente,(x1, y1) y (x2, y2) y devuelve un valor
 float que represente la distancia entre los puntos (x1, y1) y (x2, y2)
-Uso: distanciaPuntos (6.0, 5.0) (4.0, 8.0)
+Uso: distanciaPuntos ((6.0, 5.0), (4.0, 8.0))
+     3.6055512
 -}
 distanciaPuntos :: ((Float, Float), (Float, Float)) -> Float
 distanciaPuntos ((x1, y1), (x2, y2)) =
