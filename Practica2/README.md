@@ -3,4 +3,4 @@ Tiempo requerido: Me tardé alrededor de 2 horas en terminar toda la práctica.
 Captura del promp:
 
 
-![Imagen del promp](/home/vaniaibanez/Imágenes/Capturas de pantalla/captura.png)
+![Imagen del promp](https://github.com/vaniaib/Estructuras-Discretas/blob/main/Practica2/captura.png)
