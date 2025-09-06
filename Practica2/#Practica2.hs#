@@ -103,8 +103,8 @@ distanciaPuntos ((x1, y1), (x2, y2)) =
 
  {-Función: cuadrados
 Descripción:Recibe una tupla de 5 variables tipo entero y devuelve un tupla de los cuadrados de caeda una.
-Uso: cuadrados [1..3]
-     [1, 4, 9]
+Uso: cuadrados (6, 2, 7, 3, 5)
+     (36, 4, 49, 9, 5)
 -}
 cuadrados :: [Int] -> [Int]
-cuadrados x = [x * x | x <- x]
+cuadrados n= [x|x <- [1..n], n ^2]  
