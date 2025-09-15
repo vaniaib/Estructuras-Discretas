@@ -1,0 +1,44 @@
+--Practica 3
+{-Función: creditos
+Descripción: Toma un entero y regresa la materia que tiene
+esos respectivos créditos
+uso: creditos 12
+     Introducción a ciencias de la computación
+-}
+creditos :: int -> [String]
+creditos x =
+
+
+
+{-Función: negativos
+Descripción: Cuenta los numeros negativos de una lista
+uso: 
+negativos [ -1 , 2 , 4 , 6 , -4]
+          2
+-}
+negativos :: [Int] -> Int
+negativos x =
+
+
+
+{-Función: primos
+Descripción: Devuelve los primos de la lista
+uso: primos [1..20]
+     [2 , 3 , 5 , 7 , 11 , 13 , 17 , 19] 
+-}
+
+primos :: [Int] -> [Int]
+primos x = x|
+
+
+
+
+{-Función: conjuntoLista
+Descripción: Recibe una lista de cualquier tipo y devuelve una lista sin elementos repetidos a partir de la lista original.
+uso: conjuntoLista [1 , 2 , 2 , 1 , 3]
+     [1, 2 , 3] 
+-}
+
+conjuntoLista :: [Int] -> [Int]
+conjuntoLista x = [x /= x | x <- x]
+
