@@ -14,4 +14,4 @@ Que Num es un TypeClass que proporciona operaciones aritméticas básicas para t
 
 Captura de pantalla del prompt:
 
-![Captura](https://github.com/vaniaib/Estructuras-Discretas/blob/main/Practica2/captura.png)
+![Captura](https://github.com/vaniaib/Estructuras-Discretas/blob/main/Practica3/Captura%20p3.png?raw=true)
