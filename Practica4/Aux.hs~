@@ -1,0 +1,7 @@
+--Funciones auxiliares para Natural:
+module Aux (abrir) where
+
+--Funcion abrir
+abrir :: Matrioska -> Matrioska
+abrir Mati = Mati
+abrir (Cont a) = a
