@@ -1,0 +1,7 @@
+module Aux where
+--Funciones auxiliares
+
+--Reversa para palindromo
+reversa :: (Ord a) => [a] -> [a]
+reversa [] = []
+reversa (x:xs) = reversa xs++[x]

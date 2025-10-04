@@ -1,0 +1,80 @@
+
+{-Función: hollerBack
+Descripción: Toma una cadena en minusculas y la devuelve en mayusculas.
+Uso: ghci > hollerBack haskell
+          HASKELL
+-}
+import Data.Char
+
+hollerBack :: [Char] -> [Char]
+hollerBack [s] = [toUpper s]
+hollerBack xs = map toUpper xs
+
+{-Función: palindromo
+Descripción: Toma una lista de cualquier tipo y devuelve True si es palindromo de lo contrario False.
+Uso: ghci > palindromo " ana "
+       True
+-}
+
+reversa :: (Ord a) => [a] -> [a]
+reversa [] = []
+reversa (x:xs) = reversa xs++[x]
+
+
+palindromo :: (Ord a) => [a] -> Bool
+palindromo [] = True
+palindromo (x:xs) = if ((x:xs) == reversa(x:xs)) then True
+else False
+
+{-Función:replica
+Descripción: Toma un entero x, un entero n y devuelve una lista que consta
+de n apariciones de x.
+Uso: ghci > replica 2 5
+ [2 ,2 ,2 ,2 ,2]
+-}
+
+replica :: Int -> Int -> [Int]
+replica n 0 = []
+replica n 1 = [n]
+replica n m = [n | x <- [1..m]]
+
+{-
+Función: recuperaElemento
+Descripción: Toma una lista y devuelve el elemento del indice especificado en la lista.
+Uso: ghci > [2 ,4 ,6] 1
+4
+
+
+buscaElemento :: Int -> (Ord a) => [a] -> [a]
+buscaElemento n [] = []
+buscaElemento n (x:xs) = if n==x then n
+else buscaElemento n (xs)
+auxRecupera :: (Ord a) => [a] -> [a] -> Int
+auxRecupera n [] = `error`
+auxRecupera n (x:xs)
+-}
+
+{-Función: rota
+Descripcion: Toma una lista y traslada el primer elemento de una lista xs al final.
+Se repite esta acción n veces usando la lista resultante en cada paso.
+Uso :ghci > [1 ,2 ,3 ,4 ,5] 2
+ghci > [3 ,4 ,5 ,1 ,2]
+ghci > [1 ,2 ,3 ,4 ,5] 13
+ghci > [4 ,5 ,1 ,2 ,3]
+
+-}
+rota :: (Ord a) => [a] -> Int -> (Ord a) => [a]
+rota [] n = []
+rota ys 0 = ys
+rota (x:xs) m = rota (xs ++ [x]) (m-1)
+
+{-Función: extranio.
+Descripción: Dado un entero positivo regresa una lista de elementos del mismo tipo aplicando el siguiente algoritmo: Toma como entrada un entero positivo N. Si N es par, el algoritmo lo divide
+sobre dos, y si N es impar, el algoritmo lo multiplica por tres y agrega uno.El algoritmo repite esto, hasta que n es uno. Su tarea es simular la ejecución del algoritmo para un valor dado de N.
+Uso:ghci > extranio 13
+ [13 ,40 ,20 ,10 ,5 ,16 ,8 ,4 , 2 , 1]
+-}
+extranio :: Int -> [Int]
+extranio 1 = [1]
+extranio n = if (n `mod` 2 == 0) then n`div`2
+else (3 * n +1)

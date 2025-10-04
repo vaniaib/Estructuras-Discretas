@@ -1,0 +1,8 @@
+Ibáñez Bustamante Vania Elisa
+Practica5
+
+Objetivo de la práctica:
+Utilizar la recursión en las listas
+
+Tiempo requerido:
+Alrededor de 3 horas
