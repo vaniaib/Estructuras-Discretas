@@ -10,7 +10,7 @@ import Data.Char
 
 hollerBack :: [Char] -> [Char]
 hollerBack [s] = [toUpper s]
-hollerBack xs = map toUpper xs
+hollerBack (x:xs) = toUpper x : hollerBack xs
 
 {-Función: palindromo
 Descripción: Toma una lista de cualquier tipo y devuelve True si es palindromo de lo contrario False.
@@ -33,7 +33,7 @@ Uso: ghci > replica 2 5
 replica :: Int -> Int -> [Int]
 replica n 0 = []
 replica n 1 = [n]
-replica n m = [n | x <- [1..m]]
+replica n m = n : replica n (m-1)
 
 {-
 Función: recuperaElemento
