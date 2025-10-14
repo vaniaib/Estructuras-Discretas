@@ -1,0 +1,29 @@
+data Arbol a = Vacio | AB a (Arbol a) (Arbol a) deriving (Eq, Ord, Show)
+
+{-Función: nVacios
+Descripcion: Devuelve el total de nodos vacios en un arbol.
+Uso: ghci > nVacios (( AB 4 ( Vacio ) ( AB 3 Vacio Vacio ) ) )
+ 3
+-}
+nVacios :: Arbol a -> Int
+nVacios Vacio = 1
+nVacios (AB r t1 t2) = nVacios t1 +  nVacios t2
+
+{-Función: refleja
+Descripción: Hace que todos los subarboles izquierdos se vuelvan subarboles derechos y viceversa.
+Uso: ghci > refleja ( AB 4 Vacio ( AB 3 Vacio ( AB 5 Vacio Vacio ) ) )
+ AB 4 ( AB 3 ( AB 5 Vacio Vacio ) Vacio ) Vacio
+-}
+
+refleja :: Arbol a -> Arbol a
+refleja Vacio = Vacio
+refleja (AB r t1 t2) = (AB r t2 t1)
+
+{-Función: max
+Descripcion:Devuelve el elemento máximo
+Uso : ghci > max ( AB 9.0 ( AB 4.0 Vacio ( AB 5.0 Vacio ( AB 6.1 Vacio Vacio )) ) Vacio )
+9.0
+-}
+
+max:: Arbol a -> Float
+max (AB r t1 t2) = 

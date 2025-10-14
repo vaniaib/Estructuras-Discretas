@@ -1,0 +1,15 @@
+Ibáñez Bustamante Vania Elisa Practica5
+
+Objetivo de la práctica: Utilizar la recursión en árboles y listas
+
+Tiempo requerido: Alrededor de 5 horas
+
+‘‘‘ mermaid
+graph TB
+A((4))-->B((Ø))
+    A-->C((3));
+    B-->E((4))
+    B-->F((5))
+    C-->H((6))
+    C-->I((7))
+‘‘‘

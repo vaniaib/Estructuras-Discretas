@@ -1,0 +1,18 @@
+module Aux where
+--Funciones auxiliares
+
+--Auxiliar para mínimo, devuelve el elemento menor
+minimoAux :: (Ord a) => a -> a -> a
+minimoAux t1 t2 = if t1 <= t2 then t1 else t2
+
+--Auxiliar para recorrido, concatena dos listas
+recorridoAux :: [a] -> [a] -> [a]
+recorridoAux [] ys = ys
+recorridoAux (x:xs) ys = x:(recorridoAux xs ys)
+
+--Auxiliar para esBalanceado, regresa la altura
+
+altura :: Arbol a -> Int
+altura Vacio = 0
+altura (AB n Vacio Vacio) = 1
+altura (AB n t1 t2) = if altura t1 > altura t2 then 1 + altura t1 else 1 + altura t2
