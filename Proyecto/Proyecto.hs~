@@ -1,0 +1,1 @@
+HuffmanTree = Vacio | Hoja Char | Nodo HuffmanTree HuffmanTree 
