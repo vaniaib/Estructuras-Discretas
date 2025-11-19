@@ -32,10 +32,10 @@ comprime (x:xs) = [(arbol (x:xs) ,  codifica (x:xs) (arbol (x:xs)))]
 
 {-Función: descomprime
 Descripción: recibe un árbol y un String y regresa la String correspondiente
-Uso:
+Uso: ghci> descomprime (Nodo (Nodo (Nodo (Nodo (Nodo (Nodo Vacio (Hoja 'k')) (Hoja 'r')) (Hoja 'd')) (Hoja 'e')) (Hoja 'm')) (Hoja 'a')) "0000011000010110001101001"
+"karmadame"
+
 -}
 descomprime :: HuffmanTree -> String -> String
-descomprime Vacio _ = ""
---descomprime _ (x:xs) = ""
-descomprime (Nodo ai ad) (x:xs) = comprimeaux [x] (Nodo ai ad) ++ descomprime (Nodo ai ad) xs
-
+descomprime Vacio _ = error "debes poner un arbol"
+descomprime (Nodo ai ad) (x:xs) =descomprimeaux (separada (x:xs) [] []) (Nodo ai ad)

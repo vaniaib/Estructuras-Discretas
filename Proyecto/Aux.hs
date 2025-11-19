@@ -43,11 +43,14 @@ letra (x:xs) (Nodo ai ad) = if (x == '1') then [nodo ad]
 else (letra xs ai)
 
 --Función que regresa la palabra (descomprime)
-comprimeaux :: String -> HuffmanTree -> String
-comprimeaux "" _ = ""
-comprimeaux (x:xs) (Nodo ai ad) = (letra [x] (Nodo ai ad)) ++ (comprimeaux (xs) (Nodo ai ad))
+descomprimeaux :: [String] -> HuffmanTree -> String
+descomprimeaux [] _ = ""
+descomprimeaux (x:xs) (Nodo ai ad) = (letra x (Nodo ai ad)) ++ (descomprimeaux (xs) (Nodo ai ad))
 
---Funcíon que separa la codificación para buscar en el arbol
---separada :: String -> String
---separada [x] = if (x == "1") then 
+--Funcíon que separa la codificación para buscar en el arbol(descomprime)
+separada :: String -> String -> [String] -> [String]
+separada [] acc acl = acl
+separada (x:xs) acc acl = if (x == '0')
+then separada xs (acc++[x]) acl
+ else separada xs "" (acl++[(acc++[x])]) 
 
